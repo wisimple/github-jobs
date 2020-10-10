@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { isIntersectionTypeNode } from "typescript";
 import JobCard from "./components/JobCard";
 import GithubJobServie from "./Services/GithubJobService";
 
