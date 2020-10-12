@@ -1,0 +1,11 @@
+.button,
+.button:link,
+.button:visited {
+  text-decoration: none;
+  background-color: grey;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+
+  cursor: pointer;
+}

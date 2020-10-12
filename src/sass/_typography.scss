@@ -1,0 +1,78 @@
+p,
+ul {
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 400;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.1em;
+}
+
+li::before {
+  content: "";
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.6rem;
+  // font-weight: 700;
+
+  background-color: var(--color-primary);
+  --webkit-mask-image: url(/img/chevron-thin-right.svg);
+  --webkit-mask-size: cover;
+  mask-image: url(/img/chevron-thin-right.svg);
+  mask-size: cover;
+}
+
+[class^="flex--"] {
+  display: flex;
+}
+
+.flex--justify-sb {
+  justify-content: space-between;
+}
+
+$directions: ("t", "r", "b", "l");
+$lengths: (0, 1, 2, 3, 4, 5);
+
+@each $length in $lengths {
+  .m-#{$length} {
+    margin: #{$length}rem;
+  }
+  @each $direction in $directions {
+    .m#{$direction}-#{$length} {
+      @if $direction == "t" {
+        margin-top: #{$length}rem;
+      }
+      @if $direction == "r" {
+        margin-right: #{$length}rem;
+      }
+      @if $direction == "b" {
+        margin-bottom: #{$length}rem;
+      }
+      @if $direction == "l" {
+        margin-left: #{$length}rem;
+      }
+    }
+  }
+}

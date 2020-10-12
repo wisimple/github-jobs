@@ -5,24 +5,27 @@
 
   min-height: 100vh;
 
-  // border-radius: var(--radius-sm);
-  // box-shadow: var(--shadow-dark);
+  @include respond(phone) {
+    margin: 0;
+    padding: 1rem;
+  }
 }
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
   padding: 2rem;
+  margin-bottom: 2rem;
 
   font-size: 1.4rem;
 
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-dark);
 
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
+  background-color: var(--color-grey-light-4);
 }
 
 // .header::before {
@@ -31,5 +34,5 @@
 // }
 
 .content {
-  padding: 2rem 0;
+  // padding: 2rem 0;
 }

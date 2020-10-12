@@ -1,0 +1,43 @@
+.card {
+    padding: 2rem;
+    border-radius: var(--radius-sm);
+    color: var(--color-grey-dark-1);
+    background-color: #fff;
+    font-size: 1.6rem;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+        0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+
+    overflow: hidden;
+    & > *:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+            content: "";
+            border-bottom: 1px solid black;
+        }
+
+        &__text {
+            flex-grow: 1;
+        }
+
+        &__image {
+            height: 4rem;
+        }
+    }
+
+    &__body {
+    }
+
+    &__footer {
+    }
+}
