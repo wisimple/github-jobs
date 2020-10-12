@@ -22,7 +22,6 @@ const JobCard = ({ job }: JobCardProps) => {
     company,
     company_logo,
     company_url,
-    description,
     location,
     type,
     how_to_apply,
